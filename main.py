@@ -21,7 +21,7 @@ def main():
               if event.type == pygame.QUIT:
                  return          # allows the closure of the window
           screen.fill("black")
-          dt = clock.tick(60) / 1000 # fps set to 60
+          dt = clock.tick(60) / 1000 # fps set to 60 # make sure dt updates before player.update uses it
           player.update(dt)
           player.draw(screen)      
           pygame.display.flip()
